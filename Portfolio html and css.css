@@ -1,0 +1,497 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+/* General Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #ffffff;
+    color: #101b50;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background: white;
+    box-shadow: 0 2px 10px #ddd;
+}
+
+.navbar h2 {
+    font-size: 20px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #101b50;
+    font-size: 14px;
+    font-weight: bold;
+    padding-bottom: 8px;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover,
+.navbar ul li .active {
+    color: #2864d7;
+    border-bottom: 3px solid #2864d7;
+}
+
+/* Home Section */
+.hero {
+    background: #e4e5ff;
+    padding: 55px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 220px;
+}
+
+.hero-text h1 {
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+
+.hero-text h2 {
+    color: #5558bd;
+    font-size: 27px;
+    margin-bottom: 8px;
+}
+
+.hero-text p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.btn {
+    display: inline-block;
+    background: #2864d7;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #172e82;
+    transform: translateY(-3px);
+}
+
+/* Profile Icon */
+.profile {
+    width: 200px;
+    height: 300px;
+    border-radius: 50%;
+    background: #c9cce5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile i {
+    font-size: 90px;
+    height: 200px;
+    color: #626c88;
+}
+
+/* About Section */
+.about {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+    gap: 40px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about h2,
+.skills h2,
+.projects h2,
+.contact h2 {
+    font-size: 23px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.about h2::after,
+.skills h2::after,
+.projects h2::after,
+.contact h2::after {
+    content: "";
+    display: block;
+    width: 40px;
+    height: 3px;
+    background: #2864d7;
+    margin-top: 5px;
+}
+
+.about-text p {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.about-image {
+    width: 240px;
+    height: 110px;
+    background: #d9daed;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-image i {
+    font-size: 55px;
+    color: #8993b0;
+}
+
+/* Skills Section */
+.skills {
+    background: #e9eaff;
+    padding: 20px 10px;
+}
+
+.skills h2,
+.projects h2 {
+    margin-left: 9%;
+}
+
+.skill-container {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.skill-card {
+    background: white;
+    width: 145px;
+    height: 90px;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.skill-card i {
+    color: #2864d7;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.skill-card h4 {
+    font-size: 12px;
+}
+
+.skill-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 5px 15px #c5c9ed;
+}
+
+/* Projects Section */
+.projects {
+    padding: 25px 10%;
+}
+
+.project-container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.project-card {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px;
+    flex: 1;
+    min-width: 280px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    box-shadow: 0 5px 15px #ddd;
+    transform: translateY(-4px);
+}
+
+.project-image {
+    min-width: 110px;
+    height: 75px;
+    background: #d9daed;
+    border-radius: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image i {
+    font-size: 35px;
+    color: #929ab6;
+}
+
+.project-info h3 {
+    font-size: 15px;
+    margin-bottom: 7px;
+}
+
+.project-info p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+}
+
+.project-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #2864d7;
+    border: 1px solid #2864d7;
+    padding: 5px 13px;
+    border-radius: 20px;
+    font-size: 11px;
+    transition: 0.3s;
+}
+
+.project-btn:hover {
+    background: #2864d7;
+    color: white;
+}
+
+/* Contact Section */
+.contact {
+    background: #e9eaff;
+    padding: 25px 10%;
+    display: flex;
+    justify-content: space-between;
+    gap: 35px;
+}
+
+.contact-details {
+    flex: 1;
+}
+
+.contact-details p {
+    font-size: 13px;
+    margin: 12px 0;
+}
+
+.contact-details i {
+    color: #101b50;
+    width: 25px;
+    font-size: 16px;
+}
+
+.contact-form {
+    flex: 1.5;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-row {
+    display: flex;
+    gap: 8px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 12px;
+    background: white;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #2864d7;
+}
+
+.contact-form button {
+    background: #2864d7;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-form button:hover {
+    background: #172e82;
+}
+
+/* Footer */
+footer {
+    background: #101b50;
+    color: white;
+    padding: 20px 4%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+
+.social-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 19px;
+    transition: 0.3s;
+}
+
+.social-icons a:hover {
+    color: #66a5ff;
+    transform: translateY(-3px);
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .navbar ul {
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        padding: 35px 7%;
+    }
+
+    .hero-text h1 {
+        font-size: 22px;
+    }
+
+    .profile {
+        width: 100px;
+        height: 100px;
+    }
+
+    .profile i {
+        font-size: 60px;
+    }
+
+    .about {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .about-image {
+        width: 100%;
+        height: 190px;
+        object-fit: contain;
+        display: block;
+        margin: 0 auto;
+        border-radius: 20px;
+    }
+
+    .skill-card {
+        width: 30%;
+        min-width: 100px;
+    }
+
+    .contact {
+        flex-direction: column;
+    }
+
+    footer {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        gap: 10px;
+    }
+
+    .navbar ul li a {
+        font-size: 12px;
+    }
+
+    .project-container {
+        flex-direction: column;
+    }
+
+    .project-card {
+        min-width: 0;
+    }
+
+    .form-row {
+        flex-direction: column;
+    }
+
+    .skill-card {
+        width: 45%;
+    }
+}
+
+.project-img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.project-file {
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.meri-image {
+    width: 100%;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: contain;
+    margin: 20px auto;
+    border-radius: 10PX;
+    display: block;
+}
